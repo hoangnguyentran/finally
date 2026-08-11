@@ -1,0 +1,53 @@
+# E2E test stack: the app container plus a Playwright container.
+# Browser dependencies stay out of the production image.
+#
+#   docker compose -f test/docker-compose.test.yml up --build --abort-on-container-exit
+#
+# The suite's exit code is the `playwright` container's; pair the command above
+# with `--exit-code-from playwright` in CI.
+
+name: finally-test
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: finally:test
+    environment:
+      # Deterministic, offline LLM responses — no OpenRouter key needed.
+      LLM_MOCK: "true"
+      OPENROUTER_API_KEY: "test-key-unused-when-llm-mock-is-true"
+      # Empty => built-in market simulator rather than the Massive API.
+      MASSIVE_API_KEY: ""
+      DATABASE_PATH: /app/db/finally.db
+    tmpfs:
+      # Ephemeral database so every test run starts from freshly seeded state.
+      - /app/db
+    expose:
+      - "8000"
+
+  playwright:
+    # Pinned to the same Playwright version as test/package.json; the image
+    # already carries the matching browser binaries.
+    image: mcr.microsoft.com/playwright:v1.50.0-noble
+    depends_on:
+      app:
+        condition: service_healthy
+    working_dir: /tests
+    volumes:
+      - ./:/tests
+      # Keep the container's node_modules out of the bind mount so a host-side
+      # install (darwin binaries) can't leak into the linux container.
+      - playwright-node-modules:/tests/node_modules
+    environment:
+      # Tests target the app over the compose network, not localhost.
+      BASE_URL: http://app:8000
+      CI: "true"
+    # Chromium needs more than the default 64MB of /dev/shm.
+    shm_size: 1gb
+    init: true
+    command: ["/bin/sh", "-c", "npm ci --no-audit --no-fund && npx playwright test"]
+
+volumes:
+  playwright-node-modules:

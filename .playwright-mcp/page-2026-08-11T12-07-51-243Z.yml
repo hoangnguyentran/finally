@@ -1,0 +1,178 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - banner [ref=f11e3]:
+      - generic [ref=f11e4]:
+        - generic [ref=f11e5]:
+          - generic [ref=f11e6]: FIN
+          - generic [ref=f11e7]: ALLY
+          - generic [ref=f11e8]: AI Trading Workstation
+        - status [ref=f11e9]:
+          - generic [ref=f11e11]: Live
+      - generic [ref=f11e12]:
+        - generic [ref=f11e13]:
+          - generic [ref=f11e14]: Cash
+          - generic [ref=f11e15]: $10,000.00
+        - generic [ref=f11e17]:
+          - generic [ref=f11e18]: Positions
+          - generic [ref=f11e19]: $0.00
+        - generic [ref=f11e20]:
+          - generic [ref=f11e21]: Unrealized P&L
+          - generic [ref=f11e22]: +$0.00 (+0.00%)
+        - generic [ref=f11e23]:
+          - generic [ref=f11e24]: Portfolio Value
+          - generic [ref=f11e25]: $10,000.00
+    - main [ref=f11e26]:
+      - region "Watchlist" [ref=f11e27]:
+        - generic [ref=f11e28]:
+          - heading "Watchlist" [level=2] [ref=f11e29]
+          - generic [ref=f11e30]: "10"
+        - generic [ref=f11e31]:
+          - table [ref=f11e33]:
+            - caption [ref=f11e34]: Watched tickers with live prices
+            - rowgroup [ref=f11e35]:
+              - row [selected] [ref=f11e36] [cursor=pointer]:
+                - cell "AAPL" [ref=f11e37]
+                - cell "189.97" [ref=f11e38]
+                - cell "—" [ref=f11e40]
+                - cell [ref=f11e41]:
+                  - img "AAPL sparkline, collecting data" [ref=f11e42]
+                - cell [ref=f11e43]:
+                  - button "Remove AAPL from watchlist" [ref=f11e44]: ✕
+              - row [ref=f11e45] [cursor=pointer]:
+                - cell "GOOGL" [ref=f11e46]
+                - cell "175.10" [ref=f11e47]
+                - cell "—" [ref=f11e49]
+                - cell [ref=f11e50]:
+                  - img "GOOGL sparkline, collecting data" [ref=f11e51]
+                - cell [ref=f11e52]:
+                  - button "Remove GOOGL from watchlist" [ref=f11e53]: ✕
+              - row [ref=f11e54] [cursor=pointer]:
+                - cell "MSFT" [ref=f11e55]
+                - cell "420.11" [ref=f11e56]
+                - cell "—" [ref=f11e58]
+                - cell [ref=f11e59]:
+                  - img "MSFT sparkline, collecting data" [ref=f11e60]
+                - cell [ref=f11e61]:
+                  - button "Remove MSFT from watchlist" [ref=f11e62]: ✕
+              - row [ref=f11e63] [cursor=pointer]:
+                - cell "AMZN" [ref=f11e64]
+                - cell "185.09" [ref=f11e65]
+                - cell "—" [ref=f11e67]
+                - cell [ref=f11e68]:
+                  - img "AMZN sparkline, collecting data" [ref=f11e69]
+                - cell [ref=f11e70]:
+                  - button "Remove AMZN from watchlist" [ref=f11e71]: ✕
+              - row [ref=f11e72] [cursor=pointer]:
+                - cell "TSLA" [ref=f11e73]
+                - cell "249.94" [ref=f11e74]
+                - cell "—" [ref=f11e76]
+                - cell [ref=f11e77]:
+                  - img "TSLA sparkline, collecting data" [ref=f11e78]
+                - cell [ref=f11e79]:
+                  - button "Remove TSLA from watchlist" [ref=f11e80]: ✕
+              - row [ref=f11e81] [cursor=pointer]:
+                - cell "NVDA" [ref=f11e82]
+                - cell "830.25" [ref=f11e83]
+                - cell "—" [ref=f11e85]
+                - cell [ref=f11e86]:
+                  - img "NVDA sparkline, collecting data" [ref=f11e87]
+                - cell [ref=f11e88]:
+                  - button "Remove NVDA from watchlist" [ref=f11e89]: ✕
+              - row [ref=f11e90] [cursor=pointer]:
+                - cell "META" [ref=f11e91]
+                - cell "500.21" [ref=f11e92]
+                - cell "—" [ref=f11e94]
+                - cell [ref=f11e95]:
+                  - img "META sparkline, collecting data" [ref=f11e96]
+                - cell [ref=f11e97]:
+                  - button "Remove META from watchlist" [ref=f11e98]: ✕
+              - row [ref=f11e99] [cursor=pointer]:
+                - cell "JPM" [ref=f11e100]
+                - cell "195.06" [ref=f11e101]
+                - cell "—" [ref=f11e103]
+                - cell [ref=f11e104]:
+                  - img "JPM sparkline, collecting data" [ref=f11e105]
+                - cell [ref=f11e106]:
+                  - button "Remove JPM from watchlist" [ref=f11e107]: ✕
+              - row [ref=f11e108] [cursor=pointer]:
+                - cell "V" [ref=f11e109]
+                - cell "279.98" [ref=f11e110]
+                - cell "—" [ref=f11e112]
+                - cell [ref=f11e113]:
+                  - img "V sparkline, collecting data" [ref=f11e114]
+                - cell [ref=f11e115]:
+                  - button "Remove V from watchlist" [ref=f11e116]: ✕
+              - row [ref=f11e117] [cursor=pointer]:
+                - cell "NFLX" [ref=f11e118]
+                - cell "600.58" [ref=f11e119]
+                - cell "—" [ref=f11e121]
+                - cell [ref=f11e122]:
+                  - img "NFLX sparkline, collecting data" [ref=f11e123]
+                - cell [ref=f11e124]:
+                  - button "Remove NFLX from watchlist" [ref=f11e125]: ✕
+          - generic [ref=f11e126]:
+            - textbox "Add ticker" [ref=f11e127]:
+              - /placeholder: ADD TICKER
+            - button "ADD" [disabled] [ref=f11e128]
+      - generic [ref=f11e129]:
+        - region "AAPL · Session" [ref=f11e130]:
+          - generic [ref=f11e131]:
+            - heading "AAPL · Session" [level=2] [ref=f11e132]
+            - generic [ref=f11e133]:
+              - generic [ref=f11e134]: "189.97"
+              - generic [ref=f11e135]: —
+          - generic [ref=f11e136]: Accumulating price history from the live stream…
+        - generic [ref=f11e139]:
+          - generic [ref=f11e140]: Order
+          - textbox "Trade ticker" [ref=f11e141]:
+            - /placeholder: TICKER
+            - text: AAPL
+          - textbox "Trade quantity" [ref=f11e142]:
+            - /placeholder: QTY
+            - text: "1"
+          - button "BUY" [ref=f11e143]
+          - button "SELL" [ref=f11e144]
+          - generic [ref=f11e145]: ≈ $189.97
+        - generic [ref=f11e146]:
+          - region "Positions" [ref=f11e147]:
+            - generic [ref=f11e148]:
+              - heading "Positions" [level=2] [ref=f11e149]
+              - generic [ref=f11e150]: 0 · $0.00
+            - paragraph [ref=f11e152]: No open positions. Use the trade bar or ask the AI assistant to buy something.
+          - region "Allocation Heatmap" [ref=f11e153]:
+            - heading "Allocation Heatmap" [level=2] [ref=f11e155]
+            - generic [ref=f11e156]: No positions yet
+          - region "Portfolio Value" [ref=f11e159]:
+            - heading "Portfolio Value" [level=2] [ref=f11e161]
+            - application [ref=f11e166]:
+              - generic [ref=f11e170]:
+                - generic [ref=f11e171]:
+                  - generic [ref=f11e172]: 20:07:47
+                  - generic [ref=f11e174]: 20:07:50
+                - generic [ref=f11e176]:
+                  - generic [ref=f11e177]: $9,980
+                  - generic [ref=f11e179]: $9,990
+                  - generic [ref=f11e181]: $10,000
+                  - generic [ref=f11e183]: $10,010
+                  - generic [ref=f11e185]: $10,020
+      - region "AI assistant" [ref=f11e187]:
+        - generic [ref=f11e188]:
+          - heading "AI Assistant" [level=2] [ref=f11e189]
+          - button "Collapse AI assistant" [expanded] [ref=f11e190]: ›
+        - generic [ref=f11e191]:
+          - generic [ref=f11e192]:
+            - paragraph [ref=f11e193]: Ask FinAlly about your portfolio, request analysis, or have it trade for you.
+            - list [ref=f11e194]:
+              - listitem [ref=f11e195]:
+                - button "How is my portfolio doing?" [ref=f11e196]
+              - listitem [ref=f11e197]:
+                - button "Buy 5 shares of NVDA" [ref=f11e198]
+              - listitem [ref=f11e199]:
+                - button "Add PYPL to my watchlist" [ref=f11e200]
+          - list
+        - generic [ref=f11e201]:
+          - textbox "Message FinAlly" [ref=f11e202]:
+            - /placeholder: Message FinAlly…
+          - button "SEND" [disabled] [ref=f11e203]
+  - alert [ref=f11e204]
+  - generic [ref=f11e205]: 20:07:47

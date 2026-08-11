@@ -1,0 +1,23 @@
+# Convenience wrapper around the same image the start scripts build/run.
+#   docker compose up --build      -> http://localhost:8000
+#   docker compose down            (data survives; the named volume is kept)
+
+services:
+  finally:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: finally:latest
+    container_name: finally
+    ports:
+      - "${PORT:-8000}:8000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_PATH: /app/db/finally.db
+    volumes:
+      - finally-data:/app/db
+    restart: unless-stopped
+
+volumes:
+  finally-data:
